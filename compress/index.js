@@ -1,4 +1,3 @@
-
 const input = document.getElementById('input')
 const before = document.getElementById('before')
 const after = document.getElementById('after')
