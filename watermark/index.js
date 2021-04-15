@@ -4,8 +4,6 @@ window.onload = function() {
 
 function watermark() {
   const url = createImage('测试数据')
-  const img = document.getElementById('img')
-  img.setAttribute('src', url)
   const watermark = document.getElementById('watermark')
   watermark.style.background = 'url(' + url + ') repeat top left'
 }
