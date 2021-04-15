@@ -21,6 +21,7 @@ function getBase64(file) {
   return new Promise((reslove, reject) => {
     const reader = new FileReader()
     let result = ''
+    // 将图片转为base64编码
     reader.readAsDataURL(file)
     reader.onload = function(){
       result = reader.result
