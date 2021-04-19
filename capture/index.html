@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      getMedia({
+        video: true,
+        audio: true
+      })
+      // 判断兼容性
+      function getMedia(constraints) {
+        if (navigator.mediaDevices.getUserMedia) {
+          navigator.mediaDevices
+            .getUserMedia({
+              audio: { echoCancellation: false },
+              video: { facingMode: 'user' }
+            })
+            .then((success) => {
+              console.log(success)
+            })
+            .catch((error) => {
+              console.log(error)
+            })
+        } else if (navigator.webkitGetUserMedia) {
+          //webkit核心浏览器
+          navigator.webkitGetUserMedia(constraints, success, error)
+        } else if (navigator.mozGetUserMedia) {
+          //firfox浏览器
+          navigator.mozGetUserMedia(constraints, success, error)
+        } else if (navigator.getUserMedia) {
+          //旧版API
+          navigator.getUserMedia(constraints, success, error)
+        }
+      }
+    </script>
+  </body>
+</html>

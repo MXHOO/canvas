@@ -1,0 +1,9 @@
+{
+  "name": "canvas",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "canvas 使用总结",
+  "repository": "https://github.com/MXHOO/canvas.git",
+  "author": "孟晓慧 <mengxiaohui@renrenche.com>",
+  "license": "MIT"
+}
